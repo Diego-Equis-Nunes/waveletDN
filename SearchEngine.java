@@ -3,7 +3,7 @@ import java.net.URI;
 
 class Handler implements URLHandler {
     // This server will support tracking, adding and quering strings.
-    int num = 7;
+    List <String> storage = new ArrayList<String>;
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
