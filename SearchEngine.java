@@ -10,12 +10,14 @@ class Handler implements URLHandler {
         if (url.getPath().equals("/")) {
             return String.format("Diego Nunes' String: ", storage);
         } 
+        //When search
         if (url.getPath().equals("/search")) {
            System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add")) {
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("app")) {}
         } else {
+                //When add, have all add options.
             System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add")) {
                 String[] parameters = url.getQuery().split("=");
